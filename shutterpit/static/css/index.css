@@ -14,7 +14,7 @@ body {
     padding: 10px 18px;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
-    background-color: black;
+    background-color: darkslategrey;
     font-size: 17px;
   }
   div#navbarNav.collapse.navbar-collapse {
@@ -185,7 +185,7 @@ div.container.imageloc {
   padding-top: 40px;
 }
 .banner {
-  background: url(../images/landing2.jpg) no-repeat 0px 0px;
+  background: url(../images/cam8.jpg) no-repeat 0px 0px;
   background-size: cover;
   background-position: ;
   -webkit-background-size: cover;
