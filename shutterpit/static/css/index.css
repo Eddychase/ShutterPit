@@ -187,7 +187,6 @@ div.container.imageloc {
 .banner {
   background: url(../images/cam8.jpg) no-repeat 0px 0px;
   background-size: cover;
-  background-position: ;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
@@ -205,7 +204,7 @@ div.container.imageloc {
   background: rgba(0, 0, 0, 0.8);
 }
 .banner-1 {
-  background: url(../images/landing2.jpg) no-repeat 0px 0px;
+  background: url(../images/cam6.jpg) no-repeat 0px 0px;
   background-size: cover;
   background-position: center;
   -webkit-background-size: cover;
@@ -419,9 +418,7 @@ h5.modal-title {
     max-width: 150px;
     overflow: auto;
   }
-  button.btn.btn-secondary {
-    /* display: none; */
-  }
+
   h5#deleteModalLabel.modal-title {
     margin: 0px;
   }
@@ -465,9 +462,6 @@ h5.modal-title {
   input#link.form-control {
     max-width: 150px;
     overflow: auto;
-  }
-  button.btn.btn-secondary {
-    /* display: none; */
   }
   h5#deleteModalLabel.modal-title {
     margin: 0px;
