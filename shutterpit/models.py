@@ -52,6 +52,11 @@ class Image(models.Model):
 class Location(models.Model):
     name = models.CharField(max_length =50)
 
+    @classmethod
+    def tag_articles(cls):
+        tags = cls.objects.all()
+        return tags
+
     def save_location(self):
         self.save()
 
