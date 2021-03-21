@@ -12,3 +12,6 @@ class Image(models.Model):
 
 class Location(models.Model):
     name = models.CharField(max_length =50)
+
+class Category(models.Model):
+    name = models.CharField(max_length =50)
