@@ -16,6 +16,10 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
+    @classmethod
+    def update_image(cls, id ,name, description , image_location, image_category):
+        update = cls.objects.filter(id = id).update(name = name, description = description ,image_location = image_location,image_category = image_category)
+
 
 class Location(models.Model):
     name = models.CharField(max_length =50)
