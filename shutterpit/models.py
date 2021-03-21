@@ -10,6 +10,12 @@ class Image(models.Model):
     image_location = models.ForeignKey('Location')
     image_category = models.ForeignKey('Category')
 
+    @classmethod
+    def get_all_images(cls):
+        images = cls.objects.all()
+        return images
+
+
     def save_image(self):
         self.save()
     
