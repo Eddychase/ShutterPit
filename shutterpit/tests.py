@@ -3,6 +3,25 @@ from .models import Image,Category,Location
 
 # Create your tests here.
 class ImageTestClass(TestCase):
+
+    def setUp(self):
+        self.cat = Category(name="fashion")
+        self.cat.save_category()
+
+        self.loc = Location(name="Africa")
+        self.loc.save_location()
+
+        self.image = Image(name='image test', description='my test',image_location=self.loc, image_category=self.cat)
+        self.image.save_image()
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.image, Image))
+
+    def tearDown(self):
+        self.image.delete_image()
+        self.cat.delete_category()
+        self.loc.delete_location()
+
     def test_save_method(self):
         self.image.save_image()
         images  = Image.objects.all()
@@ -24,6 +43,13 @@ class ImageTestClass(TestCase):
         images = Image.fil0ter_by_location('1')
         print(images)
         self.assertTrue(len(images)>0)
+    
+    def test_update_image(self):
+        self.image.save_image()
+        image = Image.update_image( self.image.id, 'test update', 'my test',self.loc, self.cat)
+        upimage = Image.objects.filter(id = self.image.id)
+        print(upimage)
+        self.assertTrue(Image.name == 'test update')
 
 
 class CategoryTestClass(TestCase):
