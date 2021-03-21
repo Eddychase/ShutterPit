@@ -60,3 +60,12 @@ class Category(models.Model):
     def update_category(self, update):
         self.name = update
         self.save()
+
+    @classmethod
+    def get_category_id(cls, id):
+        category = Category.objects.get(pk = id)
+        return category
+
+    def __str__(self):
+        return self.name
+
