@@ -24,3 +24,31 @@ class ImageTestClass(TestCase):
         images = Image.fil0ter_by_location('1')
         print(images)
         self.assertTrue(len(images)>0)
+
+
+class CategoryTestClass(TestCase):
+    # Set up Method
+    def setUp(self):
+        self.cat = Category(name="Nature")
+        self.cat.save_category()
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.cat, Category))
+
+    def test_save_method(self):
+        self.cat.save_category()
+        category = Category.objects.all()
+        self.assertTrue(len(category) > 0)
+
+    def test_delete_method(self):
+        self.cat.save_category()
+        self.cat.delete_category()
+        category = Category.objects.all()
+        self.assertTrue(len(category) == 0)
+
+    def test_update(self):
+        category = Category.get_category_id(self.cat.id)
+        category.update_category('Street')
+        category = Category.get_category_id(self.cat.id)
+        self.assertTrue(category.name == 'Street')
+
