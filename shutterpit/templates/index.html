@@ -42,7 +42,7 @@
             style="width: 100%"
           >
             <img
-              src="{{image.picture.cdn_url}}"
+              src="{{image.picture.url}}"
               href=""
               class="image"
               alt="Image"
@@ -96,7 +96,7 @@
                 href="{% url 'single' category_name=image.image_category.name image_id=image.id %}"
                 ><img
                   id="img{{image.id}}"
-                  src="{{image.picture.cdn_url}}"
+                  src="{{image.picture.url}}"
                   class="img-thumbnail"
                   alt="Image"
                   style="cursor: pointer"
