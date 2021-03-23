@@ -4,9 +4,7 @@
 <div class="banner">
   <div class="cover">
     <div class="container image">
-      <h2 id="category">
-        A portrait is not made in the camera but on either side of it.
-      </h2>
+      <h2 id="category"></h2>
       <form class="form" role="search" action="{% url 'search_image' %}">
         <div class="input-group">
           <input
@@ -18,10 +16,7 @@
           <br />
         </div>
       </form>
-      <p>
-        Photography deals exquisitely with appearances, but nothing is what it
-        appears to be.
-      </p>
+      <p>If you can't make it good, at least make it look good.</p>
       <a href="#gallery">VIEW GALLERY</a>
     </div>
   </div>
@@ -61,7 +56,7 @@
       <img src="{% static 'images/sorry.png' %}" alt="" class="oops" />
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center">Sorry no images exists at the moment.</h2>
+      <h2 class="text-center">Sorry</h2>
     </div>
   </div>
   {% endfor %}
