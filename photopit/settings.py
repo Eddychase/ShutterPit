@@ -109,7 +109,7 @@ UPLOADCARE = {
     'secret': 'everever96',
 }
 
-WSGI_APPLICATION = 'shutterpit.wsgi.application'
+WSGI_APPLICATION = 'photopit.wsgi.application'
 
 
 # Database

@@ -1,1 +1,1 @@
-web: gunicorn shutterpit.wsgi
+web: gunicorn photopit.wsgi
